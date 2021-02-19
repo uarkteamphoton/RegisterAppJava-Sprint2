@@ -12,6 +12,16 @@ import edu.uark.registerapp.models.repositories.ActiveUserRepository;
 
 @Service
 public class ActiveUserDeleteCommand implements VoidCommandInterface {
+	//added code
+	private void validateEmployeeName() {
+		if (StringUtils.isBlank(this.apiEmployee.getFirstName())) {
+			throw new UnprocessableEntityException("first name");
+		}
+		if (StringUtils.isBlank(this.apiEmployee.getLastName())) {
+			throw new UnprocessableEntityException("last name");
+		}
+	}
+
 	@Transactional
 	@Override
 	public void execute() {
