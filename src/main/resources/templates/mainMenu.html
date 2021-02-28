@@ -4,10 +4,10 @@
 	<title>Register - Main Menu</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 
-	<link rel="stylesheet" type="text/css" href="/styles/master.css">
+	<link rel="stylesheet" type="text/css" href="../static/styles/master.css">
 
-	<script type="text/javascript" src="/scripts/master.js" defer></script>
-	<script type="text/javascript" src="/scripts/mainMenu.js" defer></script>
+	<script type="text/javascript" src="../static/scripts/master.js" defer></script>
+	<script type="text/javascript" src="../static/scripts/mainMenu.js" defer></script>
 </head>
 
 <body>
@@ -22,7 +22,6 @@
 		</div>
 
 		<div class="mainMenuActionsWrapper">
-			<br />
 			<button id="startTransactionButton" type="button" class="action" title="Functionality Not Available">Start Transaction</button>
 			<br /><br />
 			<button id="viewProductsButton" type="button" class="action">View Products</button>
@@ -33,6 +32,7 @@
 				<button id="productSalesReportButton" type="button" class="action" title="Functionality Not Available">Product Sales</button>
 				<br /><br />
 				<button id="cashierSalesReportButton" type="button" class="action" title="Functionality Not Available">Cashier Sales</button>
+				<br /><br />
 			</div>
 		</div>
 	</div>
@@ -52,9 +52,13 @@
 			}
 		</script>
 	</div>
+	<br />
 
 	<div class="footer">
-		<img id="signOutImage" src="/images/Sign-Out.png" alt="Sign Out" class="footer" />
+		<button id="signOutButton" onclick="window.location.href='signIn.html';">
+		<img src="../static/images/logout-24px.svg" alt="Sign Out" class="footer" />
+		
+		</button>
 	</div>
 		
 </body>
